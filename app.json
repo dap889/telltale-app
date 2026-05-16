@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Telltale",
+    "slug": "telltale",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.telltale.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Telltale needs microphone access to analyze your speech."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0A0A0F"
+      },
+      "package": "com.telltale.app",
+      "permissions": ["RECORD_AUDIO"]
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-av", { "microphonePermission": "Telltale needs microphone access to analyze your speech." }]
+    ],
+    "scheme": "telltale",
+    "web": { "bundler": "metro" }
+  }
+}
